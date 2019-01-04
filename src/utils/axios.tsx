@@ -1,7 +1,7 @@
 // request.js
 import Axios from 'axios';
 import NProgress from 'nprogress';
-import { message, notification } from 'antd';
+import { notification, message } from 'antd';
 import router from 'umi/router';
 import { Promise } from 'q';
 

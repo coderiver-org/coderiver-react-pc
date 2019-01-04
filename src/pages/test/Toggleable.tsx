@@ -1,5 +1,8 @@
-import React, { Component, ComponentType, MouseEvent, ReactNode } from 'react';
-import { isFunction } from 'util';
+import React, { Component, MouseEvent, ReactNode, ComponentType } from 'react';
+import {
+  isFunction,
+  // getHocComponentName
+} from 'util';
 
 const initialState = {
   show: false,

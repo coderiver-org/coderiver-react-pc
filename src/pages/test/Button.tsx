@@ -1,4 +1,4 @@
-import React, { Component, ComponentType, MouseEvent, SFC } from 'react';
+import React, { MouseEvent, SFC, ComponentType, Component } from 'react';
 
 /*type Props = {
     onClick(e: MouseEvent<HTMLElement>): void
