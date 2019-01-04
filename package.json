@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "lint": "eslint --ext .js src mock tests",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^0.1.5",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "umi": "^2.1.6",
+    "umi-plugin-react": "^1.1.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.7.1",
+    "@material-ui/icons": "^3.0.1",
+    "axios": "^0.18.0",
+    "eslint-config-alloy": "^1.4.2",
+    "eslint-plugin-typescript": "^0.14.0",
+    "mockjs": "^1.0.1-beta3",
+    "nprogress": "^0.2.0",
+    "react": "16.7.0-alpha.0",
+    "react-dom": "16.7.0-alpha.0",
+    "typescript-eslint-parser": "^21.0.1",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "webpack-bundle-analyzer": "^3.0.3"
+  }
+}
