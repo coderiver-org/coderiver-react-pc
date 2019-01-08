@@ -1,7 +1,7 @@
 import React from 'react';
-import { ComProps } from '../type/displayType';
+import { ComProps } from '../../type/common';
 
-export default function DisplayLayout(props: ComProps) {
+export default function Index(props: ComProps) {
   // console.log(props);
   return (
     <div>

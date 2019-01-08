@@ -2,7 +2,6 @@
 
 import path from 'path';
 
-
 export default {
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
@@ -57,6 +56,7 @@ export default {
     //   })
     // );
     config.resolve.alias.set('src', path.resolve(__dirname, './src'));
+    config.resolve.alias.set('component', path.resolve(__dirname, './src/component'));
     // config.module
     //   .rule('save')
     //   .test(/\.less$/)

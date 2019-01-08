@@ -1,4 +1,4 @@
-import { ComProps } from 'src/type/displayType';
+import { ComProps } from 'src/type/common';
 
 export default function Com500(props: ComProps) {
   return (
