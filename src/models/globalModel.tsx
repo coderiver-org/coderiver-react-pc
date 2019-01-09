@@ -1,4 +1,4 @@
-import { Model } from 'src/typing';
+import { Model } from 'src/type/model';
 
 type S = {
   test: number;
@@ -19,7 +19,7 @@ export default ((): Model<S> => {
     },
 
     effects: {
-      *fetch({ payload, callback }, { call, put }) {
+      * fetch({ payload, callback }, { call, put }) {
         // eslint-disable-line
         yield put({ type: 'save' });
         if (callback) callback();

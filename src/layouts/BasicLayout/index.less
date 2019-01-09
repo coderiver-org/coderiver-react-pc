@@ -1,0 +1,34 @@
+.normal {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+  background: darkslateblue;
+  padding: 0.6em 0;
+  color: white;
+  margin: 0;
+}
+
+.cr-base {
+  width: 100%;
+  //background: #ccc;
+  min-height: 100vh;
+  :global {
+    .cr-main {
+      width: 1220px;
+      margin: 0 auto;
+      background: #ffffff;
+      height: 100%;
+      min-width: 1220px;
+    }
+    @media (max-width: 1220px) {
+      .cr-main {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -231,7 +231,7 @@ module.exports = {
      */
 
     // 'typescript/no-constant-condition': 2,
-    'typescript/quotemark': [true,"single","avoid-escape","jsx-double"],
+    'typescript/quotemark': [true, 'single', 'avoid-escape', 'jsx-double'],
     'typescript/no-console': 0,
     'typescript/ordered-imports': 0,
     'typescript/no-namespace': 0,
@@ -259,8 +259,8 @@ module.exports = {
     //     "public-instence-method"
     //   ]
     // }],
-    'typescript/object-literal-key-quotes': [true,"as-needed"],
-    'typescript/no-trailing-whitespace': [false,"ignore-comments"],
+    'typescript/object-literal-key-quotes': [true, 'as-needed'],
+    'typescript/no-trailing-whitespace': [false, 'ignore-comments'],
     'typescript/class-name-casing': 2,
 
     /**
@@ -274,6 +274,8 @@ module.exports = {
     'react/jsx-sort-prop-types': 0, // 是否排序 prop types
     'react/jsx-uses-react': 2, // 组件中中是否用了 react
     'react/jsx-uses-vars': 2, // 定义了 jsx component 没有使用
+    'react/jsx-pascal-case': 1, // 使用jsx作为组件扩展名，采用pascal命名法  引用名采用驼峰命名
+    'react/jsx-closing-bracket-location': 1, // 组件prop的的对齐风格
     'react/no-did-mount-set-state': 0, // 不要在 componentDidMount 里面设置 state
     'react/no-did-update-set-state': 0, // 同上
     'react/no-multi-comp': 0, // 一个文件里面禁止声明多个 component
@@ -282,6 +284,7 @@ module.exports = {
     'react/react-in-jsx-scope': 1, // 查看 jsx 是否引入 react
     'react/self-closing-comp': 2, // 检查是否有没有 children 的非子闭合标签
     'react/jsx-wrap-multilines': 1, // 不强制 return 的时候，结构的格式
+    'react/prefer-es6-class': 1, // 使用组件类继承React.Component
     'react/sort-comp': [
       0,
       {
@@ -298,8 +301,6 @@ module.exports = {
     ],
     'react/jsx-indent-props': 0,
 
-
-    'no-var':0
+    'no-var': 0,
   },
-
 };
