@@ -15,14 +15,20 @@
 
 .cr-base {
   width: 100%;
-  background: #ccc;
+  //background: #ccc;
   min-height: 100vh;
   :global {
     .cr-main {
-      width: 1200px;
+      width: 1220px;
       margin: 0 auto;
       background: #ffffff;
       height: 100%;
+      min-width: 1220px;
+    }
+    @media (max-width: 1220px) {
+      .cr-main {
+        width: 100%;
+      }
     }
   }
 }

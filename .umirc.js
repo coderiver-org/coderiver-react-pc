@@ -8,7 +8,7 @@ export default {
     [
       'umi-plugin-react',
       {
-        antd: false,
+        antd: true,
         dva: true,
         dynamicImport: true,
         title: 'umi-ts',
@@ -22,6 +22,9 @@ export default {
   ],
   history: 'hash',
   cssLoaderOptions: {},
+  alias: {
+    component: path.resolve(__dirname, './src/component'),
+  },
   chainWebpack(config, { webpack }) {
     // config.plugin('analyzer').use(
     //   new BundleAnalyzerPlugin({
@@ -57,6 +60,7 @@ export default {
     // );
     config.resolve.alias.set('src', path.resolve(__dirname, './src'));
     config.resolve.alias.set('component', path.resolve(__dirname, './src/component'));
+    config.resolve.alias.set('assets', path.resolve(__dirname, './src/assets'));
     // config.module
     //   .rule('save')
     //   .test(/\.less$/)

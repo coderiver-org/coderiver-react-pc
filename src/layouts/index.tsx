@@ -2,6 +2,7 @@ import React from 'react';
 import BasicLayout from './BasicLayout/';
 import DisplayLayout from './DisplayLayout/';
 import GlobalLayout from './GlobalLayout/';
+import LoginLayout from './LoginLayout/';
 import './BasicLayout/index.less';
 import { ComProps } from '../type/common';
 import { isNull } from 'util';
@@ -16,6 +17,9 @@ export default function(props: ComProps) {
       break;
     case 'coderiver':
       ChlLayout = () => <BasicLayout>{props.children}</BasicLayout>;
+      break;
+    case 'user':
+      ChlLayout = () => <LoginLayout>{props.children}</LoginLayout>;
       break;
     default:
       ChlLayout = null;
