@@ -205,7 +205,7 @@ module.exports = {
     'no-underscore-dangle': 0, // 允许任意使用下划线
     'one-var': [1, 'never'], // 定义变量一行一个
     'padded-blocks': [0, 'never'], // 块代码上下不能留空行
-    semi: 2, // 校验分号
+    semi: 0, // 校验分号
     'semi-spacing': 2, // 分号后面留空
     'keyword-spacing': 2, // 关键词后面加空格
     'space-before-blocks': 2, // 块级代码加空格
