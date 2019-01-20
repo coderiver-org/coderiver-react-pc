@@ -1,0 +1,59 @@
+.sign-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 42px);
+  box-sizing: border-box;
+
+  :global {
+    .sign-container{
+      background-color: #ffffff;
+      width: 444px;
+      margin: 0px auto;
+
+      .sign-header {
+        margin: 30px 0px 30px 0px;
+        p{
+          margin: 20px auto 0px auto;
+          font-size: 20px;
+          font-family: "Adobe Heiti Std R";
+          font-weight: normal;
+          color: rgba(24, 38, 42, 1);
+          line-height: 26px;
+        }
+      }
+
+      .sign-foot {
+        background:rgba(246,246,246,1);
+        padding: 38px 0px 40px 0px;
+        color: #18262A;
+        a {
+          color: #40AEA8
+        }
+      }
+
+      form {
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+          color:    #FF40AEA8;
+          font-weight: bold;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color:    #FF40AEA8;
+          opacity:  1;
+          font-weight: bold;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color:    #FF40AEA8;
+          opacity:  1;
+          font-weight: bold;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color:    #FF40AEA8;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
