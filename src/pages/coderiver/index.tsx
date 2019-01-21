@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 import HomeTitle from 'component/home/HomeTitle';
 import bgimg from 'assets/images/home/bg@2x(1).png';
 
 export default class Home extends Component {
-  render() {
+  render(): ReactNode {
     return (
       <div>
         <img style={{ width: '100%' }} src={bgimg} alt="" />

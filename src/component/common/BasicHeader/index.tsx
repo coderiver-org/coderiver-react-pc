@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styles from './index.less';
 import { Menu, Icon } from 'antd';
-import logo from 'assets/images/home/logo@2x.png';
+import logo from 'assets/svg/logo@2x.svg';
 import router from 'umi/router';
+import Nav from './nav';
+import Search from '@material-ui/icons/Search';
 
 export default class BasicHeader extends Component {
   state = {
@@ -17,23 +19,24 @@ export default class BasicHeader extends Component {
   };
 
   render() {
-    const Nav = props => (
-      <Menu onClick={props.handleClick} selectedKeys={[props.current]} mode="horizontal">
-        <Menu.Item key="home">首页</Menu.Item>
-        <Menu.Item key="project-center">项目中心</Menu.Item>
-        <Menu.Item key="talent-plaza">人才广场</Menu.Item>
-      </Menu>
-    );
+    // const Nav = props => (
+    //   <Menu onClick={props.handleClick} selectedKeys={[props.current]} mode="horizontal">
+    //     <Menu.Item key="home">首页</Menu.Item>
+    //     <Menu.Item key="project-center">项目中心</Menu.Item>
+    //     <Menu.Item key="talent-plaza">人才广场</Menu.Item>
+    //   </Menu>
+    // );
     return (
       <header className={styles['cr-header']}>
         <div className={'cr-logo'}>
           <img src={logo} alt="" />
         </div>
         <div className={'cr-nav'}>
-          <Nav handleClick={this.handleClick} current={this.state.current} />
+          {/* <Nav handleClick={this.handleClick} current={this.state.current} /> */}
+          <Nav />
         </div>
         <div className={'cr-user'}>
-          <Icon type="search" />
+          <Search style={{ width: 30, height: 30, verticalAlign: 'middle' }} />
           <span
             onClick={() => {
               router.push('/user');
@@ -43,7 +46,7 @@ export default class BasicHeader extends Component {
           </span>
           <span
             onClick={() => {
-              router.push('/user');
+              router.push('/user/register');
             }}
           >
             注册
