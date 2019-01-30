@@ -1,4 +1,4 @@
-import { Model } from 'src/typing';
+import { Model } from 'src/type/model';
 import { queryTest } from 'src/pages/display/service/displayService';
 
 // type S = {
@@ -20,7 +20,7 @@ export default ((): Model<any> => {
     },
 
     effects: {
-      *fetch({ payload, callback }, { call, put }) {
+      * fetch({ payload, callback }, { call, put }) {
         // eslint-disable-line
         const res = yield call(queryTest);
         console.log(res);

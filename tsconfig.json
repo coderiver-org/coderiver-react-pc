@@ -16,13 +16,13 @@
     "strictNullChecks": false,
     "baseUrl": "./",
     "paths": {
-      "src/*": ["src/*"]
+      "src/*": ["src/*"],
+      "component/*": ["component/*"],
+      "assets/*": ["assets/*"]
     },
     "experimentalDecorators": true,
     "noImplicitAny": false
   },
   "include": ["src"],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

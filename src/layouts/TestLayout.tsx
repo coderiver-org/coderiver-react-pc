@@ -1,4 +1,4 @@
-import { ComProps } from '../type/displayType';
+import { ComProps } from '../type/common';
 
 export default function TestLayout(props: ComProps) {
   console.log(props);
