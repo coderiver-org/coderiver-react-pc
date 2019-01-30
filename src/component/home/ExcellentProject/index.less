@@ -1,0 +1,54 @@
+@import '../../../assets/css/common/index';
+.excellent-project {
+  margin-bottom: 20px;
+  :global {
+    .excellent-project-main {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: none;
+      grid-auto-flow: initial;
+      grid-auto-rows: initial;
+      grid-auto-columns: initial;
+      text-align: left;
+      transition: all 0.5s;
+      .excellent-project-main-box {
+        padding: 30px;
+        transition: all 0.5s;
+        position: relative;
+        top: 0;
+        left: 0;
+        .img {
+          width: 550px;
+          height: 368px;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+          margin-bottom: 30px;
+        }
+        .title {
+          font-size: 28px;
+        }
+        .detail {
+          font-size: 18px;
+          color: #999;
+          margin-top: 16px;
+          margin-bottom: 26px;
+        }
+        .action {
+          font-family: Arial, serif;
+          .like {
+            margin-left: 20px;
+          }
+        }
+        &:hover {
+          box-shadow: 4px 4px 16px 0 #ccc;
+          position: relative;
+          top: -20px;
+          left: -20px;
+        }
+      }
+    }
+  }
+}
