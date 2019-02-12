@@ -6,8 +6,8 @@ import BasicFooter from 'component/common/BasicFooter/';
 export default function Index(props: ComProps) {
   return (
     <section className={styles['cr-base']}>
+      <BasicHeader />
       <div className={'cr-main'}>
-        <BasicHeader />
         {props.children}
         <BasicFooter />
       </div>

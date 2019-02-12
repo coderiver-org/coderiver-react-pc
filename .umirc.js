@@ -13,9 +13,9 @@ export default {
         dynamicImport: true,
         title: 'umi-ts',
         dll: true,
-        // routes: {
-        //   exclude: [],
-        // },
+        routes: {
+          exclude: [/models/, /service/],
+        },
         // hardSource: true,
       },
     ],
@@ -23,7 +23,7 @@ export default {
   history: 'hash',
   cssLoaderOptions: {},
   alias: {
-    component: path.resolve(__dirname, './src/component')
+    component: path.resolve(__dirname, './src/component'),
   },
   chainWebpack(config, { webpack }) {
     // config.plugin('analyzer').use(
