@@ -40,7 +40,7 @@ export default class BasicHeader extends Component {
             <Search style={{ width: 30, height: 30, verticalAlign: 'middle' }} />
             <span
               onClick={() => {
-                router.push('/user');
+                router.push('/user/login');
               }}
             >
               登录
