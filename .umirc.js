@@ -20,6 +20,7 @@ export default {
       },
     ],
   ],
+  publicPath: '/code-river-pc/',
   history: 'hash',
   cssLoaderOptions: {},
   alias: {
