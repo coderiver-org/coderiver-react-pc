@@ -25,6 +25,7 @@ export default {
   cssLoaderOptions: {},
   alias: {
     component: path.resolve(__dirname, './src/component'),
+    assets: path.resolve(__dirname, './src/assets'),
   },
   theme:'./src/theme.js',
   chainWebpack(config, { webpack }) {
