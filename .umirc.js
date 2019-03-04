@@ -25,6 +25,7 @@ export default {
   cssLoaderOptions: {},
   alias: {
     component: path.resolve(__dirname, './src/component'),
+    assets: path.resolve(__dirname, './src/assets'),
   },
   chainWebpack(config, { webpack }) {
     // config.plugin('analyzer').use(

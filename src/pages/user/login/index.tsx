@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
 
+import Input from 'component/user/Input';
+import Button from 'component/user/Button';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
+
 import styles from '../style.less';
 export default class Index extends Component {
-  componentDidMount() {
-    console.log('componentDidMount() {');
-  }
-
   render() {
     return (
       <div className={styles.login}>
-        <div>logo</div>
-        <h1>登录</h1>
-        <p>还没有张虎？创建新账户</p>
+        <div className={styles.logo} />
+        <h1 className={styles.title}>登录</h1>
+        <p className={styles.subTitle}>
+          还没有账户？<a className={styles.link}>创建新账户</a>
+        </p>
+        <Input label="用户名" />
+        <Input label="密码" />
+        <Button />
+        <div className={styles.loginFotter}>
+          <Checkbox value="checkedB" color="primary" />
+          记住密码
+          <Link href={'dudUrl'} className={styles.link}>
+            忘记密码？
+          </Link>
+        </div>
       </div>
     );
   }
