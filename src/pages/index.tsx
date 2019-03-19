@@ -12,13 +12,15 @@ import Link from 'umi/link';
 import Redirect from 'umi/redirect';
 import Button from '@material-ui/core/Button';
 
-/* 配置主题样式 */
+import teal from '@material-ui/core/colors/teal';
+
+const primary = teal[500]; // #F44336
+
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
-  // 可以配置颜色,间距等等
   palette: {
-    primary: { main: 'red' },
+    primary: { main: '#ff4400' },
   },
 });
 

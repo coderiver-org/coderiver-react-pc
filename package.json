@@ -4,7 +4,7 @@
     "start": "umi dev",
     "build": "umi build",
     "test": "umi test",
-    "lint": "eslint --ext .js  .tsx src mock tests",
+    "lint": "eslint --ext .js  .tsx src mock tests"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

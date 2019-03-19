@@ -16,11 +16,11 @@ export default class Index extends Component {
           还没有账户？<a className={styles.link}>创建新账户</a>
         </p>
         <Input label="用户名" />
-        <Input label="密码" />
+        <Input label="密码" type="password" />
         <Button />
         <div className={styles.loginFotter}>
           <Checkbox value="checkedB" color="primary" />
-          记住密码
+          <span className={styles.remberPwd}>记住密码</span>
           <Link href={'dudUrl'} className={styles.link}>
             忘记密码？
           </Link>
