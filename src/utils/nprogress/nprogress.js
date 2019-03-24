@@ -10,11 +10,11 @@
     root.NProgress = factory();
   }
 })(this, function() {
-  var NProgress = {};
+  const NProgress = {};
 
   NProgress.version = '0.2.0';
 
-  var Settings = (NProgress.settings = {
+  const Settings = (NProgress.settings = {
     minimum: 0.08,
     easing: 'ease',
     positionUsing: '',
@@ -38,7 +38,7 @@
    *     });
    */
   NProgress.configure = function(options) {
-    var key, 
+    let key,
       value;
     for (key in options) {
       if (Object.prototype.hasOwnProperty.call(options, key)) {
@@ -64,12 +64,12 @@
    */
 
   NProgress.set = function(n) {
-    var started = NProgress.isStarted();
+    const started = NProgress.isStarted();
 
     n = clamp(n, Settings.minimum, 1);
     NProgress.status = n === 1 ? null : n;
 
-    var progress = NProgress.render(!started),
+    const progress = NProgress.render(!started),
       bar = progress.querySelector(Settings.barSelector),
       speed = Settings.speed,
       ease = Settings.easing;
@@ -123,7 +123,7 @@
   NProgress.start = function() {
     if (!NProgress.status) NProgress.set(0);
 
-    var work = function() {
+    const work = function() {
       setTimeout(function() {
         if (!NProgress.status) return;
         NProgress.trickle();
@@ -159,7 +159,7 @@
    */
 
   NProgress.inc = function(amount) {
-    var n = NProgress.status;
+    let n = NProgress.status;
 
     if (!n) {
       return NProgress.start();
@@ -184,7 +184,7 @@
    * @param $promise jQUery Promise
    */
   (function() {
-    var initial = 0,
+    let initial = 0,
       current = 0;
 
     NProgress.promise = function($promise) {
@@ -223,11 +223,11 @@
 
     addClass(document.documentElement, 'nprogress-busy');
 
-    var progress = document.createElement('div');
+    const progress = document.createElement('div');
     progress.id = 'nprogress';
     progress.innerHTML = Settings.template;
 
-    var bar = progress.querySelector(Settings.barSelector),
+    let bar = progress.querySelector(Settings.barSelector),
       perc = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
       parent = document.querySelector(Settings.parent),
       spinner;
@@ -257,7 +257,7 @@
   NProgress.remove = function() {
     removeClass(document.documentElement, 'nprogress-busy');
     removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
-    var progress = document.getElementById('nprogress');
+    const progress = document.getElementById('nprogress');
     progress && removeElement(progress);
   };
 
@@ -275,10 +275,10 @@
 
   NProgress.getPositioningCSS = function() {
     // Sniff on document.body.style
-    var bodyStyle = document.body.style;
+    const bodyStyle = document.body.style;
 
     // Sniff prefixes
-    var vendorPrefix =
+    let vendorPrefix =
       'WebkitTransform' in bodyStyle
         ? 'Webkit'
         : 'MozTransform' in bodyStyle
@@ -326,7 +326,7 @@
    */
 
   function barPositionCSS(n, speed, ease) {
-    var barCSS;
+    let barCSS;
 
     if (Settings.positionUsing === 'translate3d') {
       barCSS = { transform: 'translate3d(' + toBarPerc(n) + '%,0,0)' };
@@ -345,11 +345,11 @@
    * (Internal) Queues a function to be executed.
    */
 
-  var queue = (function() {
-    var pending = [];
+  const queue = (function() {
+    const pending = [];
 
     function next() {
-      var fn = pending.shift();
+      const fn = pending.shift();
       if (fn) {
         fn(next);
       }
@@ -369,8 +369,8 @@
    * does not perform any manipulation of values prior to setting styles.
    */
 
-  var css = (function() {
-    var cssPrefixes = ['Webkit', 'O', 'Moz', 'ms'],
+  let css = (function() {
+    const cssPrefixes = ['Webkit', 'O', 'Moz', 'ms'],
       cssProps = {};
 
     function camelCase(string) {
@@ -380,10 +380,10 @@
     }
 
     function getVendorProp(name) {
-      var style = document.body.style;
+      const style = document.body.style;
       if (name in style) return name;
 
-      var i = cssPrefixes.length,
+      let i = cssPrefixes.length,
         capName = name.charAt(0).toUpperCase() + name.slice(1),
         vendorName;
       while (i--) {
@@ -405,7 +405,7 @@
     }
 
     return function(element, properties) {
-      var args = arguments,
+      let args = arguments,
         prop,
         value;
 
@@ -427,7 +427,7 @@
    */
 
   function hasClass(element, name) {
-    var list = typeof element == 'string' ? element : classList(element);
+    const list = typeof element == 'string' ? element : classList(element);
     return list.indexOf(' ' + name + ' ') >= 0;
   }
 
@@ -436,7 +436,7 @@
    */
 
   function addClass(element, name) {
-    var oldList = classList(element),
+    const oldList = classList(element),
       newList = oldList + name;
 
     if (hasClass(oldList, name)) return;
@@ -450,7 +450,7 @@
    */
 
   function removeClass(element, name) {
-    var oldList = classList(element),
+    let oldList = classList(element),
       newList;
 
     if (!hasClass(element, name)) return;
