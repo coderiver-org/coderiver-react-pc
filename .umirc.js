@@ -25,6 +25,7 @@ export default {
   alias: {
     component: path.resolve(__dirname, './src/component'),
   },
+  theme:'./src/theme.js',
   chainWebpack(config, { webpack }) {
     // config.plugin('analyzer').use(
     //   new BundleAnalyzerPlugin({

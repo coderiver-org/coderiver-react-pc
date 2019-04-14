@@ -1,0 +1,26 @@
+@import '../../../theme.less';
+
+.pagination {
+  .prev,
+  .next {
+    color: @primary-color;
+  }
+  :global(.ant-pagination-disabled) {
+    .prev,
+    .next {
+      color: @disabled-color;
+      cursor: not-allowed;
+    }
+  }
+  :global(.ant-pagination-item) {
+    &:global(.ant-pagination-item-active) {
+      a {
+        color: @disabled-color;
+      }
+    }
+    border: unset;
+    a {
+      color: @primary-color;
+    }
+  }
+}
