@@ -5,22 +5,34 @@ import style from './style.less';
 const { MonthPicker: AntdMonthPicker } = AntdDatePicker;
 
 export default function Pagination({ className = '', suffixIcon, ...props }) {
-  const handleChange = e => console.log(e);
   const [open, setOpen] = useState(false);
+  const [dateString, setDateString] = useState('');
+  const handleChange = (moment, dateString) => {
+    setDateString(dateString);
+    setOpen(false);
+  };
+  const [year, month] = dateString.split('-');
   return (
     <div id="date-picker" className={style.datePicker}>
-      <div className={style.month} onClick={() => setOpen(!open)}>div</div>
-      <div className={style.year} onClick={() => setOpen(!open)}>div</div>
       <AntdMonthPicker
-        // {...props}/
-        // mode="year"
-        // popupStyle={{top:"0px"}}
-        // open={open}
+        {...props}
+        open={open}
         onChange={handleChange}
-        // suffixIcon={<div />}
-        // style={{ display:"none" }}
-        // getCalendarContainer={(...res) => document.getElementById("date-picker")}
+        suffixIcon={<div />}
+        format={'YYYY-MM'}
+        className={style.AntdMonthPicker}
+        getCalendarContainer={trigger => trigger.parentNode.parentNode}
       />
+      <div className={style.fakePicker}>
+        <div className={style.month} onClick={() => setOpen(!open)} onBlur={() => {
+          console.log(1) 
+        }}>
+          {month ? (Number.parseInt(month) + '月'): null}
+        </div>
+        <div className={style.year} onClick={() => setOpen(!open)}>
+          {year}
+        </div>
+      </div>
     </div>
   );
 }
