@@ -3,12 +3,16 @@ import HomeTitle from 'component/home/HomeTitle';
 import Banner from 'src/component/home/Banner';
 import ExcellentProject from 'src/component/home/ExcellentProject';
 import CodeRiverDownload from 'src/component/home/Download';
+import { Button } from 'antd'
 
 export default class Home extends Component {
   render(): ReactNode {
     return (
       <div>
         <Banner />
+        <Button type="primary">Button</Button>
+        <hr/>
+        <Button>Button</Button>
         <ExcellentProject />
         <HomeTitle title={'快速加入团队'} path={'/'} />
         <HomeTitle title={'优秀程序员'} path={'/'} />
