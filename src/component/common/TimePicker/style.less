@@ -1,0 +1,31 @@
+@import '../../../theme.less';
+
+.timePicker {
+  width: 264px;
+  position: relative;
+  height: 32px;
+  display: inline-block;
+  .hourPicker,
+  .mintuePicker {
+    border: unset;
+    width: 40px;
+    :global(.ant-time-picker-input) {
+      border: unset;
+      padding: 0;
+      border-bottom: 1px solid @picker-border-color;
+    }
+    :global(.ant-time-picker-clear) {
+      right: 0;
+    }
+  }
+  &:hover {
+    :global(.ant-time-picker-input) {
+      border-color: @picker-border-hover-color;
+    }
+  }
+  .break {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+  }
+}
