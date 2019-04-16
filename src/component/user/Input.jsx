@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import styles from './style.less';
 
 export default class Index extends Component {
