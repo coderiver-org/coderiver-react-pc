@@ -7,7 +7,6 @@ import Empty from 'component/common/Empty';
 import Avatar from 'component/common/Avatar';
 import Input from 'component/common/Input';
 import Popover from 'component/common/Popover';
-import Tab from 'component/common/Tab';
 import Select from 'component/common/Select';
 
 @connect(({ displayModel }) => ({
@@ -23,24 +22,20 @@ export default class Display extends Component<any> {
           <Empty />
         </Card>
 
-        <Card title="Empty数据为空时显示的组件Task">
+        <Card title="avatar头像">
           <Avatar />
         </Card>
 
-        <Card title="Empty数据为空时显示的组件Task">
-          <Input />
-        </Card>
-
-        <Card title="Empty数据为空时显示的组件Task">
+        <Card title="popover气泡卡片">
           <Popover />
         </Card>
 
-        <Card title="Empty数据为空时显示的组件Task">
-          <Tab />
+        <Card title="select下拉列表">
+          <Select />
         </Card>
 
-        <Card title="Empty数据为空时显示的组件Task">
-          <Select />
+        <Card title=" input输入框">
+          <Input />
         </Card>
       </div>
     );
