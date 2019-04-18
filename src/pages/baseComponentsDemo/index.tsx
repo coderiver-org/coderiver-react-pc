@@ -4,6 +4,7 @@ import Pagination from 'component/common/Pagination';
 import Tag from 'component/common/Tag';
 import Modal from 'component/common/Modal';
 import DatePicker from 'component/common/DatePicker';
+import TimePicker from 'component/common/TimePicker';
 
 export default function index() {
   // tag
@@ -17,6 +18,10 @@ export default function index() {
   }
   // Modal
   const [modalVisible, setModalVisible] = useState(false);
+  // datepicker
+  const [date, setDate] = useState(null);
+  // timepicker
+  const [time, setTime] = useState(null);
   return (
     <>
       <div>
@@ -55,7 +60,11 @@ export default function index() {
       </div>
       <div>
         <div>datepicker</div>
-        <DatePicker />
+        <DatePicker value={date} onChange={date => setDate(date)} />
+      </div>
+      <div>
+        <div>TimePicker</div>
+        <TimePicker value={time} onChange={(time, timeString) => setTime(time)} />
       </div>
     </>
   );

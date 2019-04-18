@@ -1,26 +1,49 @@
 import React, { useState } from 'react';
-import { DatePicker as AntdDatePicker, Input } from 'antd';
+import { DatePicker as AntdDatePicker } from 'antd';
 import style from './style.less';
 
 const { MonthPicker: AntdMonthPicker } = AntdDatePicker;
 
-export default function Pagination({ className = '', suffixIcon, ...props }) {
-  const handleChange = e => console.log(e);
+const formater = 'YYYY-MM';
+
+export default function Pagination({ className = '', suffixIcon, value, onChange, ...props }) {
   const [open, setOpen] = useState(false);
+  const [date, setDate] = useState(value || null);
+
+  const handleChange = (date, dateString) => {
+    setDate(date);
+    onChange && onChange(date, dateString);
+    setOpen(false);
+  };
+  const currentDate = value || date;
+  const [year, month] = currentDate ? currentDate.format(formater).split('-') : [null, null];
   return (
     <div id="date-picker" className={style.datePicker}>
-      <div className={style.month} onClick={() => setOpen(!open)}>div</div>
-      <div className={style.year} onClick={() => setOpen(!open)}>div</div>
       <AntdMonthPicker
-        // {...props}/
-        // mode="year"
-        // popupStyle={{top:"0px"}}
-        // open={open}
+        allowClear={false}
+        open={open}
+        value={value || date}
         onChange={handleChange}
-        // suffixIcon={<div />}
-        // style={{ display:"none" }}
-        // getCalendarContainer={(...res) => document.getElementById("date-picker")}
+        suffixIcon={<div />}
+        format={'YYYY-MM'}
+        className={style.AntdMonthPicker}
+        getCalendarContainer={trigger => document.getElementById('date-picker')}
+        {...props}
       />
+      <div className={style.fakePicker}>
+        <div
+          className={style.month}
+          onClick={() => setOpen(!open)}
+          onBlur={() => {
+            console.log(1);
+          }}
+        >
+          {month ? Number.parseInt(month) + '月' : null}
+        </div>
+        <div className={style.year} onClick={() => setOpen(!open)}>
+          {year}
+        </div>
+      </div>
     </div>
   );
 }
