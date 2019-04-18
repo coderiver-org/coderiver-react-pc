@@ -1,70 +1,8 @@
 @import '../../../assets/css/common/index';
-.header-box {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  box-shadow: 0 0 16px 0 #ccc;
-  background-color: #ffffff;
-  z-index: 10;
+.avatar-contanier {
   :global {
-    .cr-header {
-      width: 1220px;
-      margin: 0 auto;
-      display: flex;
-      height: 80px;
-      .cr-logo {
-        flex-shrink: 0;
-
-        img {
-          width: 214px;
-          height: 50px;
-          margin: 10px 20px 20px;
-        }
-      }
-
-      .cr-nav {
-        flex: 1;
-        margin-bottom: 8px;
-        align-self: center;
-        overflow: hidden;
-      }
-
-      .cr-user {
-        flex-shrink: 0;
-        font-size: 20px;
-        line-height: 80px;
-
-        > span,
-        > i {
-          margin: 0 15px;
-        }
-
-        > i {
-          font-weight: bold;
-        }
-      }
-
-      .ant-menu-item {
-        font-size: 20px;
-        color: #000;
-        line-height: 68px;
-        margin: 0 10px;
-        border-bottom: 4px solid transparent;
-      }
-
-      .ant-menu-item-selected,
-      .ant-menu-item:hover {
-        border-bottom: 4px solid @header-nav-color;
-        color: #000000;
-      }
-
-      .ant-menu-item-active .ant-menu-item-selected {
-        border-bottom: 4px solid @header-nav-color;
-      }
-
-      .ant-menu-horizontal {
-        border: none;
-      }
+    .ant-avatar {
+      margin-right: 10px;
     }
   }
 }

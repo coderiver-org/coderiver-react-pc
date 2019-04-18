@@ -1,70 +1,43 @@
 @import '../../../assets/css/common/index';
-.header-box {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  box-shadow: 0 0 16px 0 #ccc;
-  background-color: #ffffff;
-  z-index: 10;
-  :global {
-    .cr-header {
-      width: 1220px;
-      margin: 0 auto;
-      display: flex;
-      height: 80px;
-      .cr-logo {
-        flex-shrink: 0;
+.select-container {
+}
+:global {
+  .ant-select {
+    width: 300px;
+  }
 
-        img {
-          width: 214px;
-          height: 50px;
-          margin: 10px 20px 20px;
-        }
-      }
+  .ant-select-selection {
+    border-radius: 0;
+    border-color: @primary-color;
+  }
 
-      .cr-nav {
-        flex: 1;
-        margin-bottom: 8px;
-        align-self: center;
-        overflow: hidden;
-      }
+  .ant-select-selection--single {
+    height: 48px;
+  }
 
-      .cr-user {
-        flex-shrink: 0;
-        font-size: 20px;
-        line-height: 80px;
+  .ant-select-selection__rendered {
+    line-height: 48px;
+    color: #000;
+  }
 
-        > span,
-        > i {
-          margin: 0 15px;
-        }
+  .ant-select-arrow-icon {
+    color: #7c7c7c;
+  }
 
-        > i {
-          font-weight: bold;
-        }
-      }
+  .ant-select-open .ant-select-selection,
+  .ant-select-selection:focus {
+    box-shadow: none;
+    border-color: @primary-color;
+  }
 
-      .ant-menu-item {
-        font-size: 20px;
-        color: #000;
-        line-height: 68px;
-        margin: 0 10px;
-        border-bottom: 4px solid transparent;
-      }
+  .ant-select-dropdown {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #999;
 
-      .ant-menu-item-selected,
-      .ant-menu-item:hover {
-        border-bottom: 4px solid @header-nav-color;
-        color: #000000;
-      }
-
-      .ant-menu-item-active .ant-menu-item-selected {
-        border-bottom: 4px solid @header-nav-color;
-      }
-
-      .ant-menu-horizontal {
-        border: none;
-      }
+    .ant-select-dropdown-menu-item {
+      line-height: 33px;
+      color: #000;
     }
   }
 }
