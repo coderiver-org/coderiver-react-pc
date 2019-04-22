@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Pagination as AntdPagination } from 'antd';
 import style from './style.less';
 
-export default function Pagination({ className = '', ...props }) {
-  const itemRender = (page, type, originalElement) => {
+export default class Pagination extends Component {
+  itemRender = (page, type, originalElement) => {
     if (type === 'prev') {
       return <div className={style.prev}>上一页</div>;
     } else if (type === 'next') {
@@ -11,11 +11,15 @@ export default function Pagination({ className = '', ...props }) {
     }
     return originalElement;
   };
-  return (
-    <AntdPagination
-      itemRender={itemRender}
-      {...props}
-      className={`${style.pagination} ${className}`}
-    />
-  );
+  render() {
+    const { className = '', ...props} = this.props;
+    return (
+      <AntdPagination
+        itemRender={this.itemRender}
+        className={`${style.pagination} ${className}`}
+        {...props}
+      />
+    )
+  }
 }
+
