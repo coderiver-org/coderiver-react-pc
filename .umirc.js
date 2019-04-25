@@ -16,7 +16,7 @@ export default {
         routes: {
           exclude: [/models/, /service/],
         },
-        // hardSource: true,
+        hardSource: true,
       },
     ],
   ],
@@ -26,7 +26,9 @@ export default {
   alias: {
     component: path.resolve(__dirname, './src/component'),
     assets: path.resolve(__dirname, './src/assets'),
+    src: path.resolve(__dirname, './src'),
   },
+<<<<<<< Updated upstream
   chainWebpack(config, { webpack }) {
     // config.plugin('analyzer').use(
     //   new BundleAnalyzerPlugin({
@@ -75,4 +77,7 @@ export default {
     //     minimize: true,
     //   });
   },
+=======
+  chainWebpack(config, { webpack }) {},
+>>>>>>> Stashed changes
 };
