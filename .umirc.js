@@ -21,6 +21,7 @@ export default {
     ],
   ],
   publicPath: '/code-river-pc/',
+  theme:'./src/theme.js',
   history: 'hash',
   cssLoaderOptions: {},
   alias: {
