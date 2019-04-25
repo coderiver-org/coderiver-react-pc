@@ -1,18 +1,6 @@
 import React from 'react';
-import loginbg from 'assets/images/login/loginbg.png';
+import styles from './style.less';
 
 export default function LoginLayout(props) {
-  return (
-    <div
-      style={{
-        backgroundImage: `url(${loginbg})`,
-        width: '100%',
-        height: '100vh',
-        backgroundSize: 'cover',
-      }}
-      className={'cr-loginlayout'}
-    >
-      {props.children}
-    </div>
-  );
+  return <article className={styles['cr-loginlayout']}>{props.children}</article>;
 }

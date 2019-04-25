@@ -1,22 +1,7 @@
 import React from 'react';
-import Sign from 'component/user/Sign';
-import RegisterForm, { Props } from './form';
 
-type State = any
-
-export default class Index extends React.Component<Props, State> {
+export default class Index extends React.Component {
   render() {
-    const { classes } = this.props;
-    const header = '欢迎加入CodeRiver';
-    const footer = (
-      <span>已有账号？<a href="#">登录</a></span>
-    );
-    return (
-      <Sign
-        header={header}
-        footer={footer}>
-        <RegisterForm />
-      </Sign>
-    );
+    return <span>注册</span>;
   }
 }

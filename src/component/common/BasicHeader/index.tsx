@@ -3,8 +3,6 @@ import styles from './index.less';
 import { Menu, Icon } from 'antd';
 import logo from 'assets/svg/logo@2x.svg';
 import router from 'umi/router';
-import Nav from './nav';
-import Search from '@material-ui/icons/Search';
 
 export default class BasicHeader extends Component {
   state = {
@@ -37,10 +35,9 @@ export default class BasicHeader extends Component {
             {/* <Nav /> */}
           </div>
           <div className={'cr-user'}>
-            <Search style={{ width: 30, height: 30, verticalAlign: 'middle' }} />
             <span
               onClick={() => {
-                router.push('/user');
+                router.push('/user/login');
               }}
             >
               登录

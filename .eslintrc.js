@@ -4,6 +4,14 @@ module.exports = {
   settings: {
     //用于支持webpack定义的别名 (需要安装 eslint-plugin-import 和 eslint-import-resolver-webpack 插件)
     'import/resolver': 'webpack',
+    react: {
+      createClass: 'createReactClass', // Regex for Component Factory to use,
+      // default to "createReactClass"
+      pragma: 'React', // Pragma to use, default to "React"
+      version: 'detect', // React version. "detect" automatically picks the version you have installed.
+      // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+      flowVersion: '0.53', // Flow version
+    },
   },
   env: {
     browser: true,
@@ -26,20 +34,7 @@ module.exports = {
       jsx: true, // 迁移说明: http://eslint.org/docs/user-guide/migrating-to-2.0.0
     },
   },
-  ecmaFeatures: {
-    arrowFunctions: true, // 是否支持箭头函数
-    blockBindings: true, // 是否支持 let 和 const`
-    classes: true, // 是否支持 class
-    defaultParams: true, // 是否支持
-    destructuring: true, // 是否支持对象析构
-    forOf: true, // 是否支持 for-of 语法
-    objectLiteralComputedProperties: true, // 是否支持 计算属性名称 var lastName = "last name"; person[lastName] = "Zakas";
-    objectLiteralShorthandMethods: true, // 是否支持缩短方法名 sayName: function() { => sayName() {
-    objectLiteralShorthandProperties: true, // 是否支持缩短对象名 name: name, => name,
-    spread: true, // 是否支持 spread
-    superInFunctions: true, // 是否支持函数里调用 super
-    templateStrings: true, // 是否支持 ES6 模板语法
-  },
+
   globals: {
     __webpack_public_path__: true,
     process: true,
@@ -203,7 +198,7 @@ module.exports = {
     'no-trailing-spaces': 0, // 是否允许末尾有空格
     'no-extra-parens': [1, 'functions'], // "no-wrap-func": 1, 禁止额外的括号 允许括号内是方法
     'no-underscore-dangle': 0, // 允许任意使用下划线
-    'one-var': [1, 'never'], // 定义变量一行一个
+    'one-var': [1, 'consecutive'], // 定义变量一行一个
     'padded-blocks': [0, 'never'], // 块代码上下不能留空行
     semi: 0, // 校验分号
     'semi-spacing': 2, // 分号后面留空

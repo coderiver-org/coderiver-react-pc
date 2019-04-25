@@ -1,0 +1,41 @@
+@import url('../../../theme');
+:global {
+  .ant-select {
+    width: 300px;
+  }
+
+  .ant-select-selection {
+    border-radius: 0;
+    border-color: @primary-color;
+  }
+
+  .ant-select-selection--single {
+    height: 48px;
+  }
+
+  .ant-select-selection__rendered {
+    line-height: 48px;
+    color: #000;
+  }
+
+  .ant-select-arrow-icon {
+    color: #7c7c7c;
+  }
+
+  .ant-select-open .ant-select-selection,
+  .ant-select-selection:focus {
+    box-shadow: none;
+    border-color: @primary-color;
+  }
+
+  .ant-select-dropdown {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #999;
+
+    .ant-select-dropdown-menu-item {
+      line-height: 33px;
+      color: #000;
+    }
+  }
+}
