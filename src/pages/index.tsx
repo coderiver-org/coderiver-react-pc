@@ -6,8 +6,6 @@
  */
 
 import React from 'react';
-// import ButtonWithDefaultProps from './test/Button';
-
 // 根组件
 
 export default function() {

@@ -26,12 +26,16 @@ module.exports = {
     'react', // 插件地址 https://github.com/yannickcr/eslint-plugin-react
     'import', // 插件地址 https://github.com/benmosher/eslint-plugin-import
   ],
-  parserOptions: {
-    // 基于 eslint@2.x
-    sourceType: 'module',
-    ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: true, // 迁移说明: http://eslint.org/docs/user-guide/migrating-to-2.0.0
+  overrides: {
+    files: ['*.ts", "*.tsx'],
+    parser: 'typescript-eslint-parser',
+    parserOptions: {
+      // 基于 eslint@2.x
+      // sourceType: 'module',
+      ecmaVersion: 6,
+      ecmaFeatures: {
+        jsx: true, // 迁移说明: http://eslint.org/docs/user-guide/migrating-to-2.0.0
+      },
     },
   },
 
@@ -52,7 +56,6 @@ module.exports = {
     WindVane: false, // 手淘环境
     require: true, // 手淘环境
   },
-  parser: 'typescript-eslint-parser',
   rules: {
     // ES6 规则
     // http://gitlab.alibaba-inc.com/specs/style-guide/issues/50#96
