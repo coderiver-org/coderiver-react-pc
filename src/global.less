@@ -1,4 +1,5 @@
 @import 'utils/nprogress/nprogress.css';
+@import './theme.less';
 
 @primary-color: #fff;
 
@@ -33,5 +34,19 @@ button {
   // Tabs
   .ant-tabs-bar {
     border-bottom: none!important;
+  }
+
+  //datePicker
+  .ant-calendar-picker {
+    .ant-input {
+      border: unset;
+      &:focus {
+        box-shadow: unset;
+        border-color: @picker-border-hover-color;
+      }
+    }
+  }
+  .ant-tag {
+    border-color: @tag-default-bg !important;
   }
 }

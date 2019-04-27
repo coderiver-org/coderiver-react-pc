@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import Pagination from 'component/common/Pagination';
 import Tag from 'component/common/Tag';
 import Modal from 'component/common/Modal';
-import DatePicker from 'component/common/DatePicker';
+import DatePicker from 'component/common/DatePicker/index.js';
 import TimePicker from 'component/common/TimePicker';
 
 export default function index() {
@@ -61,6 +61,8 @@ export default function index() {
       <div>
         <div>datepicker</div>
         <DatePicker value={date} onChange={date => setDate(date)} />
+        <div>___</div>
+        <DatePicker />
       </div>
       <div>
         <div>TimePicker</div>
