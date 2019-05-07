@@ -1,0 +1,102 @@
+@import url('../../../theme.less');
+
+.content {
+  overflow: hidden;
+  .title {
+    margin-top: 150px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    span {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: @theme-color-2;
+        z-index: -1;
+      }
+    }
+  }
+  .team span::after {
+    background: @theme-color-3;
+  }
+  .person span::after {
+    background: @theme-color-4;
+  }
+  .cards {
+      margin-top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .more {
+      margin-top: 80px;
+      color:@theme-color;
+      text-align: center;
+  }
+  .personCard {
+      width: 324px;
+      height: 376px;
+      padding: 20px 30px 20px 20px;
+      overflow: hidden;
+      text-align: left;
+      border: 1px solid transparent;
+      .info {
+        margin-top: 40px;
+        font-size: 30px;
+        
+        .name {
+          line-height: 1em;
+          margin-bottom: 16px;
+        }
+        .job {
+          line-height: 1em;
+          font-size: 20px;
+          margin-bottom: 32px;
+        }
+        .description {
+          line-height: 1.2em;
+          font-size: 14px;
+        }
+      }
+  }
+  .currentCard {
+    border-color: #000;
+    .name,.job {
+      color:@theme-color;
+    }
+  }
+  .projectCard {
+    width: 372px;
+    height: 420px;
+    margin-right: 102px;
+    &:last-child {
+      margin: 0;
+    }
+    .image {
+      height: 210px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .defaultImage {
+      height: 210px;
+      background: url(assets/images/home/project.png) center center no-repeat;
+    }
+    .info {
+      overflow: hidden;
+      margin-top: 44px;
+      .name {
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 1em;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
