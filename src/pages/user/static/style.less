@@ -1,3 +1,30 @@
+@import url('../../../theme');
+
+.inline-block-top {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.register-container {
+  padding: 100px 140px;
+
+  .register-img {
+    width: e('calc(100%  - 640px)');
+    padding-top: 40px;
+    .inline-block-top;
+  }
+  .register-form {
+    .inline-block-top;
+    width: 640px;
+
+    .title {
+      font-size: 46px;
+      font-weight: 500;
+      letter-spacing: 6px;
+    }
+  }
+}
+
 .logo {
   width: 221px;
   height: 128px;
