@@ -10,7 +10,10 @@ export default {
       {
         antd: true,
         dva: true,
-        dynamicImport: true,
+        library: 'react',
+        dynamicImport: {
+          webpackChunkName: true,
+        },
         title: 'umi-ts',
         dll: true,
         routes: {
@@ -21,7 +24,7 @@ export default {
     ],
   ],
   publicPath: '/code-river-pc/',
-  theme:'./src/theme.js',
+  theme: './src/theme.js',
   history: 'hash',
   cssLoaderOptions: {},
   alias: {

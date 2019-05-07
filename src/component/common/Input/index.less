@@ -1,12 +1,23 @@
 @import url('../../../theme');
 
 :global {
+  .ant-input-password {
+    .ant-input-suffix {
+      top: -20px;
+
+      i {
+        font-size: 16px;
+      }
+    }
+  }
   .ant-input {
-    width: 350px;
-    line-height: 48px;
-    height: 48px;
+    line-height: 60px;
+    height: 60px;
     border-radius: 0;
-    border-color: @primary-color;
+    border-color: #999;
+
+    font-size: 16px;
+    color: #000;
 
     &:focus,
     &:hover {

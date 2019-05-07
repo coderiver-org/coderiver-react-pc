@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import styles from '../style.less';
+import styles from '../static/style.less';
+console.log(styles);
 export default class Index extends Component {
   render() {
     return (
