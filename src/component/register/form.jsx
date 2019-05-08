@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './style.less';
-import { Form, Button } from 'antd';
+import { Form, Button, Row, Col } from 'antd';
 import { Input } from 'component/common';
+import { cpus } from 'os';
 const Item = Form.Item;
 
 @Form.create()
@@ -37,13 +38,16 @@ export default class Index extends React.Component {
 
         <Item label="输入验证码">{getFieldDecorator('user2', config)(<Input />)}</Item>
 
-        <Item>
-          <Button type="primary" htmlType="submit">
-            注册
-          </Button>
-
-          <Button>取消</Button>
-        </Item>
+        <Row gutter={6} className={styles['btn-group']}>
+          <Col span={8}>
+            <Button type="primary" htmlType="submit">
+              注册
+            </Button>
+          </Col>
+          <Col span={8}>
+            <Button>直接登录</Button>
+          </Col>
+        </Row>
       </Form>
     );
   }
