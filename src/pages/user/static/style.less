@@ -6,23 +6,34 @@
 }
 
 .register-container {
-  padding: 100px 140px;
+  padding: 50px 140px;
 
   .register-img {
-    width: e('calc(100%  - 640px)');
+    width: e('calc(100%  - 600px)');
     padding-top: 40px;
     .inline-block-top;
   }
   .register-form {
     .inline-block-top;
-    width: 640px;
+    width: 600px;
 
     .title {
       font-size: 46px;
       font-weight: 500;
-      letter-spacing: 6px;
+      letter-spacing: 2px;
     }
   }
+
+  &-info {
+    padding: 150px 140px;
+    .register-img {
+      padding-top: 0;
+    }
+  }
+}
+
+.register-info {
+  background: red;
 }
 
 .logo {
