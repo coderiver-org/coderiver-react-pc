@@ -38,7 +38,7 @@ export default class Index extends React.Component {
 
         <Item label="输入验证码">{getFieldDecorator('user12', config)(<InputCaptcha />)}</Item>
 
-        <Row gutter={6} className={styles['btn-group']}>
+        <Row gutter={24} className={styles['btn-group']}>
           <Col span={8}>
             <Button type="primary">注册</Button>
           </Col>
