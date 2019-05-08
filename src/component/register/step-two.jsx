@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './style.less';
 import { Form, Button, Row, Col } from 'antd';
-import { Input, Select } from 'component/common';
+import { Select } from 'component/common';
+// import tag
 const Item = Form.Item;
 
 @Form.create()
@@ -12,7 +13,6 @@ export default class Index extends React.Component {
       if (err) {
         return;
       }
-      this.props.chnageSetp(1);
       console.log('Received values of form: ', fieldsValue);
     });
   };
@@ -25,9 +25,7 @@ export default class Index extends React.Component {
 
     return (
       <Form layout="vertical" onSubmit={this.handleSubmit} className={styles['style-form']}>
-        <Item label="选择角色">{getFieldDecorator('user', config)(<Select />)}</Item>
-
-        <Item label="工作经验">{getFieldDecorator('user1', config)(<Select />)}</Item>
+        <Item label="技术栈">{getFieldDecorator('user', config)(<Select />)}</Item>
 
         <Row gutter={6} className={styles['btn-group']}>
           <Col span={8}>
