@@ -33,12 +33,12 @@ export default class Index extends React.Component {
         <Item label="密码">{getFieldDecorator('user2', config)(<Input type="password" />)}</Item>
 
         <Item label="重复密码">
-          {getFieldDecorator('user2', config)(<Input type="password" />)}
+          {getFieldDecorator('user222', config)(<Input type="password" />)}
         </Item>
 
-        <Item label="输入验证码">{getFieldDecorator('user2', config)(<InputCaptcha />)}</Item>
+        <Item label="输入验证码">{getFieldDecorator('user12', config)(<InputCaptcha />)}</Item>
 
-        <Row gutter={6} className={styles['btn-group']}>
+        <Row gutter={24} className={styles['btn-group']}>
           <Col span={8}>
             <Button type="primary">注册</Button>
           </Col>
