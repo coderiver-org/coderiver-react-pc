@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import router from 'umi/router';
 
-import { Icon,Button } from 'antd';
+import { Icon, Button } from 'antd';
 import styles from './index.less';
 import Nav from './nav';
+import Notice from './notice';
 
 import logo from 'assets/svg/logo@2x.svg';
 
@@ -21,6 +22,8 @@ export default class BasicHeader extends Component {
 
   render() {
     const { current } = this.state;
+    const { currentUser } = this.props;
+
     return (
       <header className={`${styles.headerWrap} ${current === 'home' ? styles.home : ''}`}>
         <a className={styles.logo} href="/">
@@ -31,8 +34,21 @@ export default class BasicHeader extends Component {
           <div className={`${styles.search}`}>
             <Icon type="search" />
           </div>
-          <Button className={`${styles.btn} ${styles.login}`} type="primary" onClick={() => router.push('/login')}>登录</Button>
-          <Button className={`${styles.btn} ${styles.register}`}>注册</Button>
+          {currentUser.name ? (
+            <div className={styles.right}>Notice</div>
+          ) : (
+            <Fragment>
+              <Button
+                className={`${styles.btn} ${styles.login}`}
+                onClick={() => router.push('/login')}
+              >
+                登录
+              </Button>
+              <Button className={`${styles.btn} ${styles.register}`} type="primary">
+                注册
+              </Button>
+            </Fragment>
+          )}
         </div>
       </header>
     );

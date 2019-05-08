@@ -26,7 +26,7 @@ const axios = Axios;
 
 // 设置全局参数，如响应超市时间，请求前缀等。
 axios.defaults.timeout = 5000;
-axios.defaults.baseURL = '/api/v1';
+axios.defaults.baseURL = '/api';
 axios.defaults.withCredentials = true;
 
 // 添加一个请求拦截器，用于设置请求过渡状态

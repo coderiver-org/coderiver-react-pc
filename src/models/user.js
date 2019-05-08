@@ -1,12 +1,9 @@
-async function queryCurrent() {
-  return request('/api/currentUser');
-}
+import { queryCurrent } from 'src/services/user';
 
 export default {
   namespace: 'user',
 
   state: {
-    list: [],
     currentUser: {},
   },
 

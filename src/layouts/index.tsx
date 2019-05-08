@@ -9,6 +9,7 @@ import { isNull } from 'util';
 
 export default function(props: ComProps) {
   const firstLevenPath = getSinglePath(props.location.pathname);
+  // const firstLevenPath = 'home';
   let ChlLayout = null;
   switch (firstLevenPath) {
     case 'display':
