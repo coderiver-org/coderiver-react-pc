@@ -29,9 +29,9 @@ export default {
     assets: path.resolve(__dirname, './src/assets'),
     src: path.resolve(__dirname, './src'),
   },
-  chainWebpack(config) {
-    config.resolve.alias.set('src', path.resolve(__dirname, './src'));
-    config.resolve.alias.set('component', path.resolve(__dirname, './src/component'));
-    config.resolve.alias.set('assets', path.resolve(__dirname, './src/assets'));
-  },
+  // chainWebpack(config) {
+  //   config.resolve.alias.set('src', path.resolve(__dirname, './src'));
+  //   config.resolve.alias.set('component', path.resolve(__dirname, './src/component'));
+  //   config.resolve.alias.set('assets', path.resolve(__dirname, './src/assets'));
+  // },
 };

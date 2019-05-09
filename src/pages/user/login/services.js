@@ -1,9 +1,9 @@
 import request from '../../../utils/axios'
 
-export function login(username, password) {
+export function login(userName, password, authCode = '') {
   return request({
-    url: '/login',
+    url: '/authentication/form',
     method: 'post',
-    data: ({ username, password })
+    data: ({ userName, password, authCode })
   });
 }
