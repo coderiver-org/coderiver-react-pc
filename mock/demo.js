@@ -27,7 +27,9 @@ export default {
       res.send(formatRes(data));
     }, 2000);
   },
-  // 'GET /api/v1/test': {
-  //   a: 123,
-  // },
+  'GET /api/user/profile':(req,res) => {
+    res.send({
+      name:123
+    })
+  }
 };

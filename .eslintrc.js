@@ -201,7 +201,7 @@ module.exports = {
     'no-trailing-spaces': 0, // 是否允许末尾有空格
     'no-extra-parens': [1, 'functions'], // "no-wrap-func": 1, 禁止额外的括号 允许括号内是方法
     'no-underscore-dangle': 0, // 允许任意使用下划线
-    'one-var': [1, 'consecutive'], // 定义变量一行一个
+    'one-var': [1, 'never'], // 定义变量一行一个
     'padded-blocks': [0, 'never'], // 块代码上下不能留空行
     semi: 0, // 校验分号
     'semi-spacing': 2, // 分号后面留空

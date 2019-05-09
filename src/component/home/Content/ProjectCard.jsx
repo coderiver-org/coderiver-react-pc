@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.less';
 import theme from 'src/theme';
+import router from 'umi/router';
 
 const colorList = [theme['theme-color-2'], theme['theme-color-3'], theme['theme-color-4']];
 
@@ -8,6 +9,7 @@ export default function ProjectCard({ data, current, onClick }) {
   const { img, name, job, description, id } = data,
     handleClick = e => {
       onClick(e);
+      router.push('/');
     },
     style = img
       ? { backgroundImage: `url(${img})` }

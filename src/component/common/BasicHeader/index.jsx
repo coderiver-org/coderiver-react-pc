@@ -35,7 +35,7 @@ export default class BasicHeader extends Component {
             <Icon type="search" />
           </div>
           {currentUser.name ? (
-            <div className={styles.right}>Notice</div>
+            <div className={styles.right}><Notice /> </div>
           ) : (
             <Fragment>
               <Button

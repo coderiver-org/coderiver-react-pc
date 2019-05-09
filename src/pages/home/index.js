@@ -11,9 +11,9 @@ import styles from './styles.less';
 function Home({ currentUser, dispatch, ...props }) {
   console.log(currentUser, props);
   useEffect(() => {
-    // dispatch({
-    //   type: 'user/fetchCurrent',
-    // });
+    dispatch({
+      type: 'user/fetchCurrent',
+    });
   }, [1]);
   return (
     <Fragment>
