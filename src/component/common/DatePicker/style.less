@@ -1,37 +1,45 @@
 @import '../../../theme.less';
 
 .datePicker {
-  width: 264px;
-  position: relative;
-  height: 32px;
-  display: inline-block;
-  .AntdMonthPicker {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .month,.year {
+    border: 1px solid @picker-border-color;
+    margin-right: 10px;
   }
-  .fakePicker {
-    // z-index: 9999;
-    display: flex;
-    background-color: #fff;
-    width: 264px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 32px;
-    .year,
-    .month {
-      flex: 1;
-      margin-right: 5px;
-      border: 1px solid @picker-border-color;
-      line-height: 30px;
-      outline: unset;
-    }
-    &:hover {
-      .year,
-      .month {
-        border-color: @picker-border-hover-color;
-      }
+  &:hover {
+    .month,.year {
+      border-color: @picker-border-hover-color;
     }
   }
+  // width: 264px;
+  // // position: relative;
+  // height: 32px;
+  // display: flex;
+  // .year,
+  // .month {
+  //   flex: 1;
+  //   // border:unset;
+  //   margin-right: 5px;
+  //   border-bottom: 1px solid @picker-border-color;
+  //   line-height: 30px;
+  //   outline: unset;
+  //   &:hover {
+  //     .year,
+  //     .month {
+  //       border-color: @picker-border-hover-color;
+  //     }
+  //   }
+  // }
+
+  // .fakePicker {
+  //   // z-index: 9999;
+  //   display: flex;
+  //   background-color: #fff;
+  //   width: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 32px;
+
+
+  // }
 }

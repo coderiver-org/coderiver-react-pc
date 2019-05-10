@@ -9,7 +9,7 @@ import Input from 'component/common/Input';
 import Popover from 'component/common/Popover';
 import Select from 'component/common/Select';
 
-const { TabPane } = Tabs
+const { TabPane } = Tabs;
 
 @connect(({ displayModel }) => ({
   displayModel,
@@ -41,16 +41,24 @@ export default class Display extends Component<any> {
         </Card>
 
         <Card title="Button 按钮">
-          <Button type="primary" style={{marginRight: '8px'}}>确定</Button>
+          <Button type="primary" style={{ marginRight: '8px' }}>
+            确定
+          </Button>
           <Button>取消</Button>
         </Card>
 
         <Card title="Tabs 标签页">
-        <Tabs defaultActiveKey="1">
-          <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
-          <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
-          <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
-        </Tabs>
+          <Tabs defaultActiveKey="1">
+            <TabPane tab="Tab 1" key="1">
+              Content of Tab Pane 1
+            </TabPane>
+            <TabPane tab="Tab 2" key="2">
+              Content of Tab Pane 2
+            </TabPane>
+            <TabPane tab="Tab 3" key="3">
+              Content of Tab Pane 3
+            </TabPane>
+          </Tabs>
         </Card>
       </div>
     );
