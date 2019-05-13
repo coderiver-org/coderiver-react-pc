@@ -1,9 +1,3 @@
-/**
- * 注释路由
- * title:Index Page
- * Routes:- ./src/pages/display/index.tsx
- *   - ./src/pages/display/index.tsx
- */
 
 import React, { Fragment, useEffect } from 'react';
 import { connect } from 'dva';
@@ -82,7 +76,7 @@ const mock = [
 function Home({ currentUser, dispatch, ...props }) {
   useEffect(() => {
     dispatch({
-      type: 'user/fetchCurrent',
+      type: 'index/fetchIndex',
     });
   }, [1]);
   return (
