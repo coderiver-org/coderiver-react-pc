@@ -1,12 +1,12 @@
 import React, { Fragment, useEffect } from 'react';
 import { connect } from 'dva';
-import { Carousel } from 'antd';
+
 import Header from 'component/common/BasicHeader';
 import Footer from 'component/common/BasicFooter';
 import Banner from 'component/home/Banner';
 import Content from 'component/home/Content';
 import Join from 'component/home/Join';
-import styles from './styles.less';
+
 
 function Home({ currentUser, dispatch, ...props }) {
   console.log(currentUser, props);
