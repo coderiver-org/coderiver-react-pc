@@ -1,5 +1,90 @@
 @import '../../../theme';
 
+
+.container {
+  display: flex;
+  height: 100vh;
+  .content {
+    width: 640px;
+    text-align: center;
+    .logo {
+      margin-top: 10vh;
+      img {
+        width: 170px;
+      }
+    }
+    .title {
+      font-size: 50px;
+    }
+    .form {
+      width: 440px;
+      margin: 0 auto;
+      font-size: 16px;
+      .formItem {
+        margin-bottom: 28px;
+        .label {
+          display: flex;
+          justify-content: space-between;
+          text-align: left;
+          font-weight: bold;
+          img {
+            width: 18px;
+            height: 12px;
+            margin-top: 6px;
+          }
+        }
+        input {
+          height: 48px;
+        }
+        .button {
+          width: 100%;
+          height: 50px;
+          margin-bottom: 30px;
+        }
+        .checkContent {
+          position: relative;
+          font-style: 16px;
+          a {
+            position: absolute;
+            text-decoration: underline;
+            right: 0;
+          }
+        }
+      }
+    }
+   .errMsg {
+      display: flex;
+      width: 440px;
+      margin: 0 auto;
+      background-color: #facfbe;
+      padding: 8px;
+      margin-bottom: 30px;
+      div {
+        padding-left: 8px;
+        line-height: 72px;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      p {
+        box-sizing: content-box;
+        text-align: left;
+        padding: 16px;
+        padding-right: 80px;
+        margin-bottom: 0;
+        line-height: 20px;
+      }
+   }
+  }
+  .background {
+    flex: 1;
+    height: 100vh;
+    background: url(../../../assets/images/login/bgimg.png) no-repeat;
+    background-size: cover;
+  }
+}
+
 .crInput {
   width: 440px;
   margin-top: 29px;
@@ -17,14 +102,4 @@
     background: none;
     outline: none;
   }
-}
-
-.crButton {
-  margin-top: 36px !important;
-  width: 100%;
-  border-radius: 0 !important;
-  background-color: @primary-color!important;
-  font-size: 16px !important;
-  color: #fff !important;
-  padding: 12px 0 !important;
 }
